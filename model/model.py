@@ -194,8 +194,8 @@ class MoE(nn.Module):
         middle_set = torch.einsum('sec,ecm->scm', combine_tensor, output).permute(1, 0, 2)
         output = torch.einsum('sec,ecm->sm', combine_tensor, output)
         dist_loss = 0
-        idx_set = [i for i in range(middle_set.shape[0])]
-        sample_num = int(np.percentile(idx_set,100))
+        idx_set = [i for i in range(middle_set.shape[1])]
+        sample_num = int(np.percentile(idx_set,90))
         for i in range(middle_set.shape[0]):
             for j in range(i+1, middle_set.shape[0]):
                 sample_1_idx = random.sample(list(idx_set), sample_num)
