@@ -19,3 +19,18 @@ To train LG-FGAD without loading saved weight files
 
     python demo_DMVC_CE.py --DS HW --eval False
 
+## Reference
+
+If you find this code useful in your research, please consider citing:
+
+```
+@inproceedings{Zhang_Cai_Wu_Wang_Ng_2025,
+title={Mixture of Experts as Representation Learner for Deep Multi-View Clustering},
+volume={39},
+number={21},
+booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+author={Zhang, Yunhe and Cai, Jinyu and Wu, Zhihao and Wang, Pengyang and Ng, See-Kiong},
+year={2025},
+pages={22704-22713}
+}
+```
