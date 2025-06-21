@@ -24,7 +24,6 @@ import scipy
 if __name__ == '__main__':
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     args = arg_parse()
-    accuracies = {'acc': [], 'nmi': [], 'ari': [], 'randomforest': []}
 
     log_interval = 1
     lr = args.lr
@@ -50,7 +49,7 @@ if __name__ == '__main__':
     print('clutering embedding dimension: {}'.format(args.cluster_emb))
     print('================')
 
-    iter = 3
+    iter = 10
     if args.eval == True:
         ACCList = np.zeros((iter, 1))
         NMIList = np.zeros((iter, 1))
