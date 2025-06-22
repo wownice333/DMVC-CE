@@ -97,8 +97,6 @@ class MV_MOE_Trainer:
                 ari = ari_score(y, y_pred)
                 if best_acc<acc:
                     best_acc = acc
-                    # file_name = './weight/'+self.args.DS+'_'+str(acc)+'.pth'
-                    # self.save(file_name)
                     best_nmi = nmi
                     best_ari = ari   
             pbar.set_description(
